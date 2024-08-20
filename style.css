@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-fondo: #001329;
+    --color-fondoweb:#FFD6E2;
+    --color-primario: #e8d8e5;
+    --color-secundario: #EA4873;
+    --color-terciario: #001329;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 14px; 
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+html, body{
+    height:100%
+}
+
+body{
+    background-color: var(--color-fondoweb);
+    background-image: var(--color-fondoweb);
+    background-size: contain;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+
+.logo {
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 5%;
+}
+/* separacion de cajas */
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.section-1, .section-2{
+    flex-basis: 200px;
+    margin: 5%;
+}
+
+
+.text-area, .mensaje {
+    color: var(--color-terciario);
+    text-transform: lowercase;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 0px #F07E9D, 0 0 10px #F07E9D, 
+    0 0 15px #F07E9D, 0 0 0px #F07E9D;   
+}
+
+::placeholder {
+    color: var(--color-terciario);
+}
+
+.text-area:focus, .mensaje:focus {
+    outline: none;
+}
+
+.text-area, .mensaje{
+    width: 410px;
+    height: 250px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+
+}
+
+.mensaje {
+    background-image: url(imagenes/muneco.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.botones, .botones-mensaje {
+    display: flex;
+    justify-content:space-around;
+    margin-top: 10px;
+}
+
+.btn-desencriptar, .btn-encriptar, .btn-copiar, .btn-borrar{
+    width: 140px;
+    height: 40px;
+    border-radius:8px;
+    cursor: pointer;
+}
+
+.btn-desencriptar {
+    background: var(--color-primario);
+    border: 1px solid var(--color-secubndario);
+    color: var(--color-secundario);
+}
+
+.btn-encriptar{
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-secundario);
+    color: var(--color-primario);
+}
+
+.btn-copiar, .btn-borrar{
+background-color: var(--color-primario);
+border: 1px solid var(--color-secundario);
+color: var(--color-secundario);
+}
+
+.informacion {
+    padding: 20px;
+    color: var(--color-terciario);
+    font-size: small;
+}
+
+
+footer{
+    text-align: center;
+    color: var(--color-terciario);
+    margin-top: 10px;
+}
+
+.autor{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.redesSociales{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .iconos {
+   width: 40px;
+	 height: 40px;
+	 margin-top: 5px;
+ }
+
+
+/*NOTIFICACION*/
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--color-terciario);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.notification.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.notification-title {
+    font-size: 15px;
+    margin: 0;
+    color: #ffffff;
+}
+
+
+/* MEDIA QUERYS*/
+
+/*Desktop
+@media screen and (min-width:1024px) {
+} */
+
+/*Tablet*/
+@media screen and (min-width:768px) and (max-width:1023px){
+    .logo{
+        width: 16%;
+    }
+    
+    body{
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+}
+
+/*Movil*/
+
+@media screen and (max-width:767px) {
+    body{
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .logo{
+        width: 16%;
+    }
+
+    .btn-desencriptar, .btn-encriptar, .btn-copiar, .btn-borrar{
+        font-size: 12px;
+        width: 100px;
+        height: 30px;
+    }
+    .text-area, .mensaje{
+        width: 250px;
+        height: 150px;
+    }
+    
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto </title>
+    <meta name="description" content="Este es un encriptador de texto desarrollado por Carol.">
+    <meta name="keywords" content="encriptador de texto, encriptación, desencriptación, seguridad">
+    <meta name="author" content="Carol Valencia">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!--cuerpo programa-->
+
+<body>
+    <header>
+        <img class="logo" src="imagenes/alura.png" alt="Logo de Alura" title="Logo de alura">
+    </header>
+    
+    <main>
+        <!-- primer bloque izq-->
+        <section class="section-1">
+            <textarea class="text-area" cols="32" rows="10" placeholder="Ingrese el texto aquí" autofocus></textarea>
+
+            <div class="botones">
+                <button class="btn-encriptar" onclick="btnEncriptador()">Encriptar</button>
+                <button class="btn-desencriptar" onclick="btnDesencriptador()">Desencriptar</button>
+            </div>
+        </section>
+
+<!-- segundo bloque der, texto encriptado-->
+        <section class="section-2">
+            <textarea class="mensaje" cols="32" rows="10" readonly></textarea>
+            
+            <div class="botones-mensaje">
+                <button class="btn-copiar" title="Copiar texto" onclick="copiar()">Copiar</button>
+                <button class="btn-borrar" title="Borrar texto" onclick="borrar()">Limpiar</button>
+            </div>
+        </section>
+    </main>
+
+
+    <div class="notification">
+        <div class="notification-content">
+            <h2 class="notification-title">Texto copiado</h2>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h6 class="informacion"> Solo letras minúsculas y sin acentos.</h6>
+        </div>
+    </div>
+
+    <footer>
+        <p class="autor">Creado por Carol Valencia</p>
+
+        <div class="redesSociales">
+            
+            <a href="https://github.com/CarolVC" target="_blank">
+                <img class="iconos" src="imagenes/github.png" title="Github" alt="Github">
+            </a>
+
+            <a href="https://www.linkedin.com/in/carol-valencia-cano-07957660" target="_blank">
+                <img class="iconos" src="imagenes/linkedin.png" title="Linkedin" alt="Linkedin">
+            </a>
+                 
+           
+        </div>
+    </footer>
+
+        <script src="script.js"></script>
+  </body>
+</html>
